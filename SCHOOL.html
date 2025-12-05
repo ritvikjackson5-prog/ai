@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shanti Gyan Vidyapeeth School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------------- GLOBAL ---------------- */
+body {
+    margin: 0;
+    background: #000;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    transition: background 1s, color 1s;
+}
+
+/* THEMES */
+.theme-dark { background: #000; color: #fff; }
+.theme-neon { background: #00151b; color: cyan; }
+.theme-cyber { background: linear-gradient(135deg,#001,#012,#013,#025,#013,#002); }
+
+/* ---------------- PARTICLES ---------------- */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    z-index: -1;
+    background: transparent;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background: cyan;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px cyan;
+    animation: float 10s infinite linear;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-100vh); }
+}
+
+/* ---------------- PRELOADER ---------------- */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 6px solid rgba(0,255,255,0.1);
+    border-top: 6px solid cyan;
+    border-radius: 50%;
+    animation: spin 1s linear infinite, glow 1.5s ease infinite alternate;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px cyan; }
+    100% { box-shadow: 0 0 25px cyan; }
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid cyan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 999;
+}
+
+nav h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 26px;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: cyan;
+    text-shadow: 0 0 20px cyan;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    font-family: "Orbitron", sans-serif;
+    color: cyan;
+    text-shadow: 0 0 20px cyan;
+}
+
+.hero p {
+    font-size: 20px;
+    width: 70%;
+}
+
+/* ---------------- SECTION ---------------- */
+.section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.section h3 {
+    font-size: 35px;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    margin-bottom: 20px;
+}
+
+.section p {
+    width: 70%;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* ---------------- NEON CARDS ---------------- */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 300px;
+    padding: 25px;
+    border: 1px solid cyan;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px cyan;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid cyan;
+    background: #010101;
+}
+</style>
+</head>
+
+<body class="theme-dark">
+
+<!-- PARTICLES BACKGROUND -->
+<div id="particles"></div>
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+    <h1>SHANTI GYAN VIDYAPEETH</h1>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+    <h2>Shanti Gyan Vidyapeeth School</h2>
+    <p>A modern, disciplined, value-based institution shaping the future of education.</p>
+</div>
+
+<!-- ABOUT SECTION -->
+<div class="section" id="about">
+    <h3>About Our School</h3>
+    <p>
+        Shanti Gyan Vidyapeeth School is committed to providing excellent education blended with 
+        discipline, character development, sports training, cultural growth, and modern academic tools.
+        The school fosters confidence, leadership, and a strong value system.
+    </p>
+</div>
+
+<!-- FACILITIES SECTION -->
+<div class="section" id="facilities">
+    <h3>Our Facilities</h3>
+    
+    <div class="card-container">
+
+        <div class="card">
+            <h4>Modern Classrooms</h4>
+            <p>Smart boards, digital tools, and comfortable environment for enhanced learning.</p>
+        </div>
+
+        <div class="card">
+            <h4>Science & Computer Labs</h4>
+            <p>Advanced equipment supporting experiments, coding, and future skills.</p>
+        </div>
+
+        <div class="card">
+            <h4>Sports & Fitness</h4>
+            <p>Cricket, football, basketball, athletics, martial arts, yoga & more.</p>
+        </div>
+
+        <div class="card">
+            <h4>Library</h4>
+            <p>Thousands of books across all genres and digital resources.</p>
+        </div>
+
+        <div class="card">
+            <h4>Transport</h4>
+            <p>Safe GPS-enabled buses with trained attendants.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2025 Shanti Gyan Vidyapeeth School | All Rights Reserved
+</footer>
+
+<script>
+// REMOVE PRELOADER
+window.onload = function() { 
+    document.getElementById("preloader").style.display = "none"; 
+};
+
+// FLOATING PARTICLES GENERATION
+function createParticles() {
+    const particles = document.getElementById("particles");
+    for (let i = 0; i < 80; i++) {
+        let p = document.createElement("div");
+        p.classList.add("particle");
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.animationDuration = (5 + Math.random() * 10) + "s";
+        p.style.opacity = Math.random();
+        particles.appendChild(p);
+    }
+}
+createParticles();
+
+// AUTO THEME SWITCHER (Every 10 seconds)
+let themes = ["theme-dark", "theme-neon", "theme-cyber"];
+let current = 0;
+
+setInterval(() => {
+    document.body.classList.remove(themes[current]);
+    current = (current + 1) % themes.length;
+    document.body.classList.add(themes[current]);
+}, 10000);
+</script>
+<script src='https://cdn.jotfor.ms/agent/embedjs/019aed28d2e07f1aa590c9ca71e08b6f3f53/embed.js'>
+</script>
+</body>
+</html>
